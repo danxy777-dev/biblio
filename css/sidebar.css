@@ -1,0 +1,336 @@
+/* ==========================================================================
+   SIDEBAR NAVIGATION (Exact Figma Spec)
+   ========================================================================== */
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 16px;
+  z-index: 100;
+  transition: transform var(--transition-smooth);
+}
+
+/* Brand / Logo */
+.sidebar-top {
+  margin-bottom: 24px;
+  padding: 0 4px;
+}
+
+.sidebar-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-emblem-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #1E3932;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(30, 57, 50, 0.25);
+}
+
+.brand-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1E3932;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.brand-sub {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #84938D;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+/* Navigation Menu */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #586761;
+  transition: all var(--transition-fast);
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  background-color: #F5F4F0;
+  color: #172420;
+}
+
+.nav-item.active {
+  background-color: #1E3932;
+  color: #FFFFFF;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(30, 57, 50, 0.15);
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.nav-icon svg {
+  width: 19px;
+  height: 19px;
+  stroke-width: 1.75;
+  transition: transform var(--transition-fast);
+}
+
+.nav-item:hover .nav-icon svg {
+  transform: scale(1.05);
+}
+
+.nav-item.active .nav-icon svg {
+  stroke-width: 2;
+  color: #FFFFFF;
+}
+
+.nav-active-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #75DE9C;
+  margin-left: auto;
+}
+
+/* Reading Goal Card at Sidebar Bottom */
+.sidebar-bottom-wrap {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.reading-goal-sidebar-card {
+  background: #F5F4F0;
+  border: 1px solid #E8E5DC;
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.reading-goal-sidebar-card:hover {
+  border-color: #BCD9CE;
+  background: #EFF6F2;
+}
+
+.r-goal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.r-goal-title {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #586761;
+  text-transform: uppercase;
+}
+
+.r-goal-year {
+  background: #E8E5DC;
+  color: #172420;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.r-goal-count {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #172420;
+  margin-bottom: 6px;
+}
+
+.r-goal-bar {
+  width: 100%;
+  height: 5px;
+  background-color: #DCD9D0;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.r-goal-fill {
+  height: 100%;
+  background: #1E3932;
+  border-radius: var(--radius-full);
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.r-goal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  color: #84938D;
+  font-weight: 600;
+}
+
+.r-goal-pct {
+  color: #1E3932;
+  font-weight: 700;
+}
+
+.r-goal-link {
+  color: #1E3932;
+  font-size: 0.68rem;
+}
+
+/* Profile Online Indicator in Sidebar */
+.sidebar-user-online-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  background: #F5F4F0;
+  border-radius: var(--radius-md);
+  border: 1px solid #E8E5DC;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.sidebar-user-online-card:hover {
+  background: #EFF6F2;
+  border-color: #BCD9CE;
+}
+
+.online-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.online-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.online-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #172420;
+}
+
+.online-status {
+  font-size: 0.68rem;
+  color: #84938D;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.online-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10B981;
+}
+
+.online-more-btn {
+  color: #84938D;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* Mobile Sidebar Toggle Button & Backdrop */
+.mobile-nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.sidebar-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(18, 30, 26, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 95;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+/* Responsive sidebar */
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 0px;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    width: 250px;
+    box-shadow: var(--shadow-xl);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-backdrop.active {
+    display: block;
+    opacity: 1;
+  }
+
+  .mobile-nav-toggle {
+    display: flex;
+  }
+
+  .main-wrapper {
+    margin-left: 0;
+  }
+}
+

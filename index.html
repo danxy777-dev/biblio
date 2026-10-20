@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livraria Viva — Espaço literário</title>
+  <meta name="description"
+    content="Plataforma de Biblioteca Virtual moderna com catálogo completo, empréstimos, resenhas comunitárias, leitor digital e scanner por câmera.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Backdrop for mobile drawer -->
+    <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+    <!-- Left Navigation Sidebar -->
+    <aside id="sidebar-container" class="sidebar"></aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+      <!-- Top Sticky Header -->
+      <header id="header-container" class="top-header"></header>
+
+      <!-- Main Dynamic Page View Container -->
+      <main id="page-container" class="main-content"></main>
+    </div>
+  </div>
+
+  <!-- Global Modal Host (Scanner, Reader, Loan, Review) -->
+  <div id="modal-container" class="modal-overlay"></div>
+
+  <!-- Global Toast Notifications -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Barcode & QR Code Engine (ZXing) -->
+  <script src="https://cdn.jsdelivr.net/npm/@zxing/library@0.21.3/umd/index.min.js"></script>
+
+  <!-- Core Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/components/toast.js"></script>
+  <script src="js/components/sidebar.js"></script>
+  <script src="js/components/header.js"></script>
+  <script src="js/components/bookCard.js"></script>
+  <script src="js/components/scannerModal.js"></script>
+  <script src="js/components/readerModal.js"></script>
+  <script src="js/pages/home.js"></script>
+  <script src="js/pages/search.js"></script>
+  <script src="js/pages/scanner.js"></script>
+  <script src="js/pages/bookDetail.js"></script>
+  <script src="js/pages/categories.js"></script>
+  <script src="js/pages/profile.js"></script>
+  <script src="js/pages/community.js"></script>
+  <script src="js/pages/myBooks.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
