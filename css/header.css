@@ -39,6 +39,7 @@
 
   .header-left {
     max-width: none;
+    width: 100%;
   }
 
   .header-right {
