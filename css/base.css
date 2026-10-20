@@ -113,6 +113,13 @@ img {
   max-width: var(--container-max);
   width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: var(--space-4) var(--space-4) var(--space-8) var(--space-4);
+  }
 }
 
 /* Custom Scrollbar */
