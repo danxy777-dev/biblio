@@ -93,10 +93,10 @@ const Sidebar = {
         <a href="#/" class="sidebar-brand-logo">
           <div class="brand-emblem-box">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L12 22"></path>
-              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-              <circle cx="12" cy="7" r="1" fill="#FFFFFF"></circle>
-              <circle cx="12" cy="17" r="1" fill="#FFFFFF"></circle>
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              <path d="M12 6v12"></path>
+              <path d="M12 6l4 2v6l-4 2l-4-2v-6l4-2z"></path>
             </svg>
           </div>
           <div class="brand-text-group">
