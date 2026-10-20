@@ -115,19 +115,43 @@ const Sidebar = {
       </div>
     `;
 
-    this.bindEvents();
-  },
+      this.bindEvents();
+    },
 
-  bindEvents() {
-    const backdrop = document.getElementById('sidebar-backdrop');
-    if (backdrop) {
-      backdrop.onclick = () => {
-        document.querySelector('.sidebar').classList.remove('open');
-        backdrop.classList.remove('active');
-      };
+    bindEvents() {
+      const backdrop = document.getElementById('sidebar-backdrop');
+      if (backdrop) {
+        backdrop.onclick = () => {
+          document.querySelector('.sidebar').classList.remove('open');
+          backdrop.classList.remove('active');
+        };
+      }
+
+      // Close sidebar when a nav item is clicked (mobile)
+      document.querySelectorAll('.nav-item').forEach(item => {
+        item.onclick = () => {
+          const sidebar = document.querySelector('.sidebar');
+          if (sidebar && sidebar.classList.contains('open')) {
+            sidebar.classList.remove('open');
+            const backdrop = document.getElementById('sidebar-backdrop');
+            if (backdrop) backdrop.classList.remove('active');
+          }
+        };
+      });
+
+      // Close sidebar on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          const sidebar = document.querySelector('.sidebar');
+          if (sidebar && sidebar.classList.contains('open')) {
+            sidebar.classList.remove('open');
+            const backdrop = document.getElementById('sidebar-backdrop');
+            if (backdrop) backdrop.classList.remove('active');
+          }
+        }
+      });
     }
-  }
-};
+  };
 
 window.Sidebar = Sidebar;
 

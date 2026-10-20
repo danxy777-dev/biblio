@@ -509,6 +509,12 @@
   gap: var(--space-6);
 }
 
+@media (max-width: 1024px) {
+  .home-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .community-discussion-card {
   background: #FFFFFF;
   border: 1px solid var(--color-border);
@@ -1765,6 +1771,18 @@
   box-shadow: var(--shadow-sm);
 }
 
+@media (max-width: 1024px) {
+  .book-detail-hero {
+    grid-template-columns: 1fr;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .detail-cover-col {
+    justify-content: center;
+  }
+}
+
 .detail-cover-col {
   display: flex;
   flex-direction: column;
@@ -2677,6 +2695,12 @@
   gap: var(--space-6);
 }
 
+@media (max-width: 1024px) {
+  .profile-bottom-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
 .profile-reviews-list {
   display: flex;
   flex-direction: column;
@@ -2894,6 +2918,12 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  .community-main-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .quick-post-card {
@@ -3782,6 +3812,12 @@
   gap: 24px;
 }
 
+@media (max-width: 1024px) {
+  .my-books-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .my-lists-column {
   display: flex;
   flex-direction: column;
@@ -4077,6 +4113,12 @@
   grid-template-columns: 1.7fr 1fr;
   gap: 28px;
   align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .community-columns-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 .community-feed-column {

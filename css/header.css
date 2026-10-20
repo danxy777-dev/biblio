@@ -44,6 +44,12 @@
   transition: all var(--transition-fast);
 }
 
+@media (max-width: 480px) {
+  .search-input {
+    padding-right: 56px;
+  }
+}
+
 .search-input::placeholder {
   color: var(--color-text-muted);
   font-size: var(--text-sm);
