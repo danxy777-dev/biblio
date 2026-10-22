@@ -723,6 +723,121 @@
   border: 1px solid rgba(255,255,255,0.2);
 }
 
+/* Responsive Screen 1: Início / Home */
+@media (max-width: 900px) {
+  .hero-banner {
+    padding: 32px 28px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .hero-content {
+    max-width: 100%;
+    width: 100%;
+  }
+  .hero-illustration {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-banner {
+    padding: 22px 18px;
+    border-radius: var(--radius-lg);
+  }
+  .hero-title {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+  .hero-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: var(--space-4);
+  }
+  .hero-search-box {
+    padding: 4px 6px 4px 14px;
+  }
+  .hero-camera-btn {
+    padding: 7px 12px;
+    font-size: 0.72rem;
+  }
+  .hero-camera-btn span {
+    display: none;
+  }
+  .hero-quick-tags {
+    gap: 6px;
+  }
+  .quick-tag-chip {
+    padding: 3px 10px;
+    font-size: 0.7rem;
+  }
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .section-title {
+    font-size: 1.25rem;
+  }
+  .filter-chips-row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    max-width: 100%;
+  }
+  .filter-chip {
+    flex-shrink: 0;
+  }
+  .continue-reading-card {
+    padding: 12px;
+    gap: 12px;
+  }
+  .cr-cover-side {
+    width: 65px;
+    height: 94px;
+  }
+  .cr-title {
+    font-size: 0.95rem;
+  }
+  .community-discussion-card, .active-club-card {
+    padding: 18px 16px;
+  }
+  .card-inner-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .discussion-snippet-box {
+    padding: 12px;
+  }
+  .snippet-engagement {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .discussion-footer-calendar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-banner {
+    padding: 18px 14px;
+  }
+  .hero-title {
+    font-size: 1.35rem;
+  }
+  .featured-books-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .featured-book-item {
+    padding: 8px;
+  }
+}
+
 /* --------------------------------------------------------------------------
    SCREEN 2: RESULTADOS DE BUSCA / EXPLORAR (Harry Potter)
    -------------------------------------------------------------------------- */
@@ -1036,6 +1151,85 @@
 .pagination-ellipsis {
   padding: 0 6px;
   color: var(--color-text-muted);
+}
+
+/* Responsive Screen 2: Resultados de Busca / Explorar */
+@media (max-width: 768px) {
+  .search-hero-banner {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    gap: 14px;
+  }
+  .banner-left {
+    align-items: flex-start;
+  }
+  .banner-tag-row {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .banner-title {
+    font-size: 1.15rem;
+  }
+  .banner-actions {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+  }
+  .btn-banner-action {
+    flex: 1;
+    justify-content: center;
+  }
+  .catalog-filter-bar {
+    padding: 12px;
+  }
+  .filter-dropdown {
+    width: 100%;
+  }
+  .filter-dropdown-select {
+    width: 100%;
+    min-height: 40px;
+  }
+  .search-results-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .search-view-and-sort {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .catalog-books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+  .catalog-curator-callout {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    gap: 12px;
+    text-align: left;
+  }
+  .callout-action-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .pagination-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalog-books-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .search-term-heading {
+    font-size: 1.2rem;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -1701,6 +1895,48 @@
 
 .manual-search-input-group button:hover {
   background: var(--color-primary-dark);
+}
+
+/* Responsive Screen 3: Escanear pela Câmera */
+@media (max-width: 640px) {
+  .page-main-title {
+    font-size: 1.5rem;
+  }
+  .scanner-viewfinder-card {
+    padding: 14px;
+    border-radius: var(--radius-lg);
+  }
+  .viewfinder-viewport {
+    aspect-ratio: 4/3;
+    max-height: 280px;
+  }
+  .rec-book-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+  .rec-book-info {
+    text-align: center;
+  }
+  .primary-action-btns, .secondary-btns-row {
+    flex-direction: column;
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .btn-rec-action {
+    width: 100%;
+    justify-content: center;
+  }
+  .manual-search-input-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+  .manual-search-input-group button {
+    width: 100%;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -4035,6 +4271,108 @@
   color: #1E3932;
 }
 
+/* Responsive Print 1: Meus Livros */
+@media (max-width: 768px) {
+  .my-books-screen {
+    gap: 20px;
+  }
+  .my-books-top-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+  .my-books-main-heading {
+    font-size: 1.6rem;
+  }
+  .my-books-top-buttons {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+  }
+  .btn-shelf-action {
+    flex: 1;
+    justify-content: center;
+    padding: 9px 12px;
+  }
+  .my-books-pills-row {
+    overflow-x: auto;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 6px;
+  }
+  .shelf-pill-btn {
+    flex-shrink: 0;
+    padding: 6px 14px;
+    font-size: 0.78rem;
+  }
+  .in-progress-card-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding: 14px;
+  }
+  .ip-info-col {
+    width: 100%;
+    min-width: 0;
+  }
+  .ip-progress-col {
+    width: 100%;
+    min-width: 0;
+  }
+  .ip-actions-col {
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+    gap: 8px;
+  }
+  .btn-ip-continue {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 14px;
+    min-height: 42px;
+  }
+  .my-books-bottom-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .thematic-lists-2x2-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .thematic-card-2x2 {
+    padding: 14px;
+  }
+  .recent-history-card {
+    padding: 16px;
+  }
+  .app-global-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .app-global-footer div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .app-global-footer a {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .in-progress-card-row {
+    padding: 12px;
+  }
+  .my-books-main-heading {
+    font-size: 1.4rem;
+  }
+}
+
 /* --------------------------------------------------------------------------
    SCREEN 2: COMUNIDADE (Print 2)
    -------------------------------------------------------------------------- */
@@ -4563,6 +4901,185 @@
 
 .mini-footer-links a {
   color: #64748B;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE: SCREEN 2 - COMUNIDADE (PRINT 2)
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .community-columns-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .community-hero-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .comm-main-title {
+    font-size: 1.5rem;
+  }
+
+  .comm-header-search-wrap {
+    width: 100%;
+  }
+
+  .comm-search-box {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .community-top-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    border-bottom: 1px solid #E2E8F0;
+    padding-bottom: 12px;
+  }
+
+  .community-tabs-nav {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .community-tabs-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .btn-new-review-pill {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 16px;
+  }
+
+  .quick-composer-actions {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .quick-action-btn {
+    flex: 1 1 calc(50% - 8px);
+    justify-content: center;
+    text-align: center;
+  }
+
+  .composer-type-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .type-chip {
+    flex: 1 1 calc(50% - 8px);
+    text-align: center;
+    justify-content: center;
+  }
+
+  .comm-form-actions {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+
+  .comm-form-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .feed-post-header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .feed-post-top-right {
+    width: auto;
+  }
+
+  .feed-post-footer {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .feed-action-btn.share-btn {
+    margin-left: 0;
+  }
+
+  .comment-input-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .comment-text-input {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .comm-main-title {
+    font-size: 1.3rem;
+  }
+
+  .quick-composer-card,
+  .comm-new-post-form,
+  .feed-post-card,
+  .comm-side-card {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .quick-action-btn {
+    flex: 1 1 100%;
+  }
+
+  .type-chip {
+    flex: 1 1 100%;
+    font-size: 0.76rem;
+  }
+
+  .feed-book-preview {
+    padding: 8px 10px;
+    gap: 10px;
+  }
+
+  .preview-cover-box {
+    width: 32px;
+    height: 46px;
+  }
+
+  .preview-book-title {
+    font-size: 0.8rem;
+  }
+
+  .feed-action-btn {
+    font-size: 0.72rem;
+    gap: 4px;
+  }
+
+  .feed-action-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .comm-reader-item {
+    gap: 8px;
+  }
+
+  .btn-side-follow {
+    padding: 4px 10px;
+    font-size: 0.7rem;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -5127,6 +5644,150 @@
 }
 
 /* --------------------------------------------------------------------------
+   RESPONSIVE: SCREEN 3 - PERFIL DO LEITOR (PRINT 3)
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .profile-bottom-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-breadcrumb-bar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .reader-profile-card {
+    padding: 20px 16px;
+  }
+
+  .reader-card-top-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .reader-avatar-container {
+    width: 88px;
+    height: 88px;
+  }
+
+  .reader-info-container {
+    align-items: center;
+    width: 100%;
+  }
+
+  .reader-name-buttons-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .reader-name-verified {
+    justify-content: center;
+  }
+
+  .reader-full-name {
+    font-size: 1.35rem;
+  }
+
+  .reader-action-buttons {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .btn-profile-follow,
+  .btn-profile-msg {
+    flex: 1 1 calc(50% - 8px);
+    justify-content: center;
+    text-align: center;
+    min-width: 110px;
+  }
+
+  .reader-stats-quad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .r-stat-number {
+    font-size: 1.1rem;
+  }
+
+  .reader-books-5col-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+  }
+
+  .rev-item-top {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .rev-item-footer {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reader-profile-card {
+    padding: 16px 12px;
+  }
+
+  .reader-avatar-container {
+    width: 76px;
+    height: 76px;
+  }
+
+  .reader-full-name {
+    font-size: 1.2rem;
+  }
+
+  .reader-stats-quad {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 8px;
+  }
+
+  .btn-profile-follow,
+  .btn-profile-msg {
+    flex: 1 1 100%;
+    padding: 10px 16px;
+  }
+
+  .reader-books-5col-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .shelf-book-mini-card {
+    padding: 8px;
+  }
+
+  .mini-book-title {
+    font-size: 0.78rem;
+  }
+
+  .profile-review-box,
+  .p-side-widget-card {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .rev-item-book {
+    font-size: 0.88rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
    SCREEN 4: EXPLORAR POR CATEGORIA (Print 4)
    -------------------------------------------------------------------------- */
 .categories-page-container {
@@ -5454,6 +6115,116 @@
   font-size: 0.76rem;
   color: #64748B;
   line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE: SCREEN 4 - CATEGORIAS (PRINT 4)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .categories-4col-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .editorial-3col-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .categories-top-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .cat-header-left {
+    max-width: 100%;
+  }
+
+  .cat-main-title {
+    font-size: 1.6rem;
+  }
+
+  .cat-header-right {
+    margin-top: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .cat-search-pill-box {
+    flex: 1 1 180px;
+    width: auto;
+  }
+
+  .cat-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .cat-stat-card {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .cat-stat-value {
+    font-size: 1.05rem;
+  }
+
+  .categories-4col-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .editorial-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .editorial-3col-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .editorial-banner-frame {
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cat-main-title {
+    font-size: 1.35rem;
+  }
+
+  .cat-stats-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .categories-4col-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .cat-cell-card {
+    padding: 10px 12px;
+  }
+
+  .cat-header-right {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cat-search-pill-box {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .cat-sort-toggle-pill {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -6655,4 +7426,239 @@
   background: var(--color-primary-light);
   transform: translateY(-1px);
 }
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE: SCREEN 5 - DETALHES DO LIVRO (PRINT 5) & EXTENDED COMPONENTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .book-detail-hero-card {
+    grid-template-columns: 260px 1fr;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .detail-bottom-2col-layout {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-detail-breadcrumbs {
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 0.72rem;
+  }
+
+  .book-detail-hero-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 18px 16px;
+  }
+
+  .detail-left-cover-box {
+    align-items: center;
+    max-width: 240px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .detail-cover-3d-frame {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .detail-under-cover-stats {
+    width: 100%;
+  }
+
+  .detail-main-book-title {
+    font-size: 1.6rem;
+    text-align: left;
+  }
+
+  .detail-top-badges-row {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .detail-specs-pills-list {
+    gap: 6px;
+  }
+
+  .spec-pill-item {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+
+  .detail-primary-actions-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .btn-detail-read-now,
+  .btn-detail-add-lib {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 18px;
+  }
+
+  .detail-quick-actions-row {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 12px;
+  }
+
+  .detail-nav-tabs-bar {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    scrollbar-width: none;
+    gap: 16px;
+    width: 100%;
+    padding-bottom: 4px;
+  }
+
+  .detail-nav-tabs-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .detail-bottom-2col-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .detail-synopsis-box,
+  .detail-quote-callout-card,
+  .detail-side-widget-card,
+  .detail-specs-full-card,
+  .detail-ratings-breakdown-card,
+  .detail-chapters-box {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .ratings-summary-top {
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  .score-big-column {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding-right: 0;
+    padding-bottom: 16px;
+    min-width: unset;
+  }
+
+  .specs-data-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .specs-data-table th {
+    width: 40%;
+    white-space: nowrap;
+  }
+
+  .catalog-list-item-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .list-item-cover-wrap {
+    width: 60px;
+    height: 86px;
+  }
+
+  .list-item-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .btn-borrow-quick {
+    width: 100%;
+    text-align: center;
+  }
+
+  .search-empty-state-card {
+    padding: 28px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-main-book-title {
+    font-size: 1.35rem;
+  }
+
+  .detail-cover-3d-frame {
+    max-width: 170px;
+  }
+
+  .synopsis-heading,
+  .reviews-head-title,
+  .specs-full-title,
+  .chapters-title {
+    font-size: 1.1rem;
+  }
+
+  .quote-symbol-99 {
+    font-size: 1.8rem;
+  }
+
+  .quote-main-italic {
+    font-size: 0.88rem;
+  }
+
+  .d-rev-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .d-rev-footer {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .star-bar-label {
+    width: 50px;
+    font-size: 0.72rem;
+  }
+
+  .chapter-item-row {
+    padding: 8px 10px;
+  }
+
+  .chapter-title {
+    font-size: 0.8rem;
+  }
+
+  .edit-profile-dialog {
+    max-width: 100%;
+    margin: 8px;
+  }
+
+  .edit-profile-head,
+  .edit-profile-body,
+  .edit-profile-footer {
+    padding: 14px 16px;
+  }
+
+  .edit-profile-footer {
+    flex-direction: column-reverse;
+  }
+
+  .edit-profile-footer .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 
