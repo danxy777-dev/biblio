@@ -10,6 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Toast Notifications
   Toast.init();
 
+  // Initialize the main app shell, components, and client router
+  _bootstrapApp();
+
+  console.log('✨ Livraria Viva is fully loaded and ready.');
+});
+
+/**
+ * Initialize the main app shell: Header, Sidebar, Router, Keyboard Shortcuts.
+ * Called after the visual login is dismissed or if a session already exists.
+ */
+function _bootstrapApp() {
   // Initialize Shell Components
   Header.render();
   Sidebar.render('/');
@@ -43,5 +54,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  console.log('✨ Livraria Viva is fully loaded and ready.');
-});
+  console.log('📚 App shell initialized.');
+}
